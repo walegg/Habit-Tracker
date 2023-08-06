@@ -33,11 +33,20 @@ struct AddHabit: View {
             }
             .navigationTitle("Add new habit")
             .toolbar {
-                Button("Save") {
-                    let item = HabitItem(name: name, type: type, amount: amount)
-                    habits.items.append(item)
-                    dismiss()
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                    .foregroundColor(.red)
                 }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        let item = HabitItem(name: name, type: type, amount: amount, description: description)
+                        habits.items.append(item)
+                        dismiss()
+                    }
+                }
+                
             }
         }
     }

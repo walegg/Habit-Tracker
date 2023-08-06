@@ -27,8 +27,16 @@ struct ContentView: View {
                             }
                             Spacer()
                         }
+//                        VStack {
+//                            if activity.type == "Health" {
+//                                CheckedButtonView()
+//                            }
+//                        }
                     }
                     .onDelete(perform: removeItems)
+                    .onMove { source, destination in
+                        habits.items.move(fromOffsets: source, toOffset: destination)
+                    }
                 } header: {
                     Text("Health")
                 }
@@ -47,8 +55,16 @@ struct ContentView: View {
                             
                             Spacer()
                         }
+//                        VStack {
+//                            if activity.type == "Work" {
+//                                CheckedButtonView()
+//                            }
+//                        }
                     }
                     .onDelete(perform: removeItems)
+                    .onMove { source, destination in
+                        habits.items.move(fromOffsets: source, toOffset: destination)
+                    }
                 } header: {
                     Text("Work")
                 }
@@ -66,8 +82,16 @@ struct ContentView: View {
                             }
                             Spacer()
                         }
+//                        VStack {
+//                            if activity.type == "Relationships" {
+//                                CheckedButtonView()
+//                            }
+//                        }
                     }
                     .onDelete(perform: removeItems)
+                    .onMove { source, destination in
+                        habits.items.move(fromOffsets: source, toOffset: destination)
+                    }
                 } header: {
                     Text("Relationships")
                 }
@@ -84,15 +108,25 @@ struct ContentView: View {
                                 }
                             }
                             Spacer()
+                            
                         }
+//                        VStack {
+//                            if activity.type == "Personal Growth" {
+//                                CheckedButtonView()
+//                            }
+//                        }
                     }
                     .onDelete(perform: removeItems)
+                    .onMove { source, destination in
+                        habits.items.move(fromOffsets: source, toOffset: destination)
+                    }
                 } header: {
                     Text("Personal Growth")
                 }
             }
             .navigationBarTitle("Habit Tracker")
             .toolbar {
+                EditButton()
                 Button {
                     showingAddHabit = true
                 } label: {

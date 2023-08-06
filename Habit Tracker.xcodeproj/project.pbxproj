@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76D29DE12A7E381600A68178 /* CheckedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D29DE02A7E381600A68178 /* CheckedButtonView.swift */; };
 		76DBF3182A7D4738006A9F29 /* Habit_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DBF3172A7D4738006A9F29 /* Habit_TrackerApp.swift */; };
 		76DBF31A2A7D4738006A9F29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DBF3192A7D4738006A9F29 /* ContentView.swift */; };
 		76DBF31C2A7D473C006A9F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76DBF31B2A7D473C006A9F29 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76D29DE02A7E381600A68178 /* CheckedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckedButtonView.swift; sourceTree = "<group>"; };
 		76DBF3142A7D4738006A9F29 /* Habit Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DBF3172A7D4738006A9F29 /* Habit_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit_TrackerApp.swift; sourceTree = "<group>"; };
 		76DBF3192A7D4738006A9F29 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				76DBF3172A7D4738006A9F29 /* Habit_TrackerApp.swift */,
 				76DBF3192A7D4738006A9F29 /* ContentView.swift */,
+				76D29DE02A7E381600A68178 /* CheckedButtonView.swift */,
 				76DBF3252A7D4A35006A9F29 /* HabitItem.swift */,
 				76DBF3272A7D4A8D006A9F29 /* Habits.swift */,
 				76DBF3292A7D4BA8006A9F29 /* AddHabit.swift */,
@@ -155,6 +158,7 @@
 				76DBF3262A7D4A35006A9F29 /* HabitItem.swift in Sources */,
 				76DBF3282A7D4A8D006A9F29 /* Habits.swift in Sources */,
 				76DBF3182A7D4738006A9F29 /* Habit_TrackerApp.swift in Sources */,
+				76D29DE12A7E381600A68178 /* CheckedButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

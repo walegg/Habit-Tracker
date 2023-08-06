@@ -12,4 +12,5 @@ struct HabitItem: Identifiable, Codable {
     let name: String
     let type: String
     let amount: Int
+    let description: String
 }

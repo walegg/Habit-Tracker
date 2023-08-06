@@ -8,13 +8,43 @@
 import SwiftUI
 
 struct HabitDetails: View {
+    @StateObject var habits = Habits()
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            Section {
+                ForEach(habits.items.filter { $0.name == "Health" }) { habit in
+                    HStack {
+                        VStack {
+                            Text("\(habit.name)")
+                        }
+                        VStack {
+                            Text("\(habit.type)")
+                        }
+                        VStack {
+                            Text("\(habit.description)")
+                        }
+                        VStack {
+                            Text("\(habit.amount)")
+                        }
+                    }
+                }
+                .navigationTitle("Habit details")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button("Cancel") {
+                            dismiss()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 struct HabitDetails_Previews: PreviewProvider {
     static var previews: some View {
-        HabitDetails()
+        HabitDetails(habits: Habits())
     }
 }
